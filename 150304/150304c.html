@@ -7,7 +7,7 @@
 <style> 
 .emphasis { color:green; }
 .container { color:green; }
-li {color:black;}
+/*li {color:black;}*/
 </style>
 	<!-- <script>
 	$(function() {
@@ -30,6 +30,7 @@ li {color:black;}
 	<p>  This is my website.  I created it as part of a jQuery tutorial.  I really want to be better at front end and mobile development so that I can get a job that will pay me enough to pay my rent, student loans and afford some new clothes, a boyfriend and a trip to Berghain in Berlin!!!
 	</p>
 
+	<div class="container">
 	<ul class = "emphasis">
 		<li>Wassup, hoe!</li>
 		<li>Hello, you</li>
@@ -43,7 +44,9 @@ li {color:black;}
 			</ul>
 		</li>	
 	</ul>
+	</div>
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
 </script>
@@ -64,7 +67,10 @@ li {color:black;}
 	//$('ul.emphasis').children('li').first().addClass('emphasis');
 
 	//$('li').parents('div.containter').removeClass('emphasis');
-	console.log();
+	console.log($('ul').parents('.container'));
+	console.log($('ul').closest('.container'));
+	//.closest will find the closest selector in the DOM tree.  the Closes method is the easeit way to select a particulat element.  Parents will go up the DOM tree and save all the elements in the DOM tree that match the container that matches that which you searched for. 
+
 </script>
 
 </body>
