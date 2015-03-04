@@ -1,12 +1,27 @@
 <!DOCTYPE html>
+<!--Lesson 2 from Tuts+ 30 Days to Learn Jquery, executing code after the DOM is loaded-->
 <html>
 <head>
 <title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+	</script>
 	<style>
-	ul li { color: red;}
-	.emphasis {color: green;}
+		.emphasis {font-weight:bold;}
 	</style>
 
+	<script>
+	$(function() {
+		$('li:first-child').addClass('emphasis');	
+
+	});
+	</script>
+	<!-- 
+	<script>
+	$(document).ready(function() {
+		$('li:first-child').addClass('emphasis');
+	});
+	</script>
+	-->
 </head>
 
 <body>
@@ -15,12 +30,8 @@
 		<li>hello</li>
 		<li>hello</li>
 
-	<script src="<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>"></script>	
+	</ul>
 
-	<script> 
-		$('ul li').addClass('emphasis');
-		
-	</script>
 </body>
 
 </html>
