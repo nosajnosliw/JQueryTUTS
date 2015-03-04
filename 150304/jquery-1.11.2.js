@@ -4192,7 +4192,7 @@ var rcheckableType = (/^(?:checkbox|radio)$/i);
 	// IE strips leading whitespace when .innerHTML is used
 	support.leadingWhitespace = div.firstChild.nodeType === 3;
 
-	// Make sure that tbody elements aren't automatically inserted
+	// Make sure that body elements aren't automatically inserted
 	// IE will insert them into empty tables
 	support.tbody = !div.getElementsByTagName( "tbody" ).length;
 

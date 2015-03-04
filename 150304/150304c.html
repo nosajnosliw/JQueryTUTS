@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--Lesson 3 from Tuts+ 30 Days to Learn Jquery, basics of Querying the DOM - review a handful of traversal methods that you'll use often in your projects, including children(), find(), parent(), closest(), and next().-->
+<html>
+<head>
+<meta charset=utf-8>
+<title></title>
+<style> 
+.emphasis { color:green; }
+.container { color:green; }
+li {color:black;}
+</style>
+	<!-- <script>
+	$(function() {
+		$('li:first-child').addClass('emphasis');	
+
+	});
+	</script>
+	
+	<script>
+	$(document).ready(function() {
+		$('li:first-child').addClass('emphasis');
+	});
+	</script>
+	-->
+</head>
+
+<body>
+<div class="container">
+<h1>Welcome to my Website </h1>
+	<p>  This is my website.  I created it as part of a jQuery tutorial.  I really want to be better at front end and mobile development so that I can get a job that will pay me enough to pay my rent, student loans and afford some new clothes, a boyfriend and a trip to Berghain in Berlin!!!
+	</p>
+
+	<ul class = "emphasis">
+		<li>Wassup, hoe!</li>
+		<li>Hello, you</li>
+		<li>Hey, gurl!!</li>
+		<li>Hey, bitch!!</li>
+		<li>Hey fag!!!</li>
+		<li>HEY!!!!</li>
+			<ul>
+				<li>Don't call me no hoe!</li>
+				<li>Please don't call me that!!</li>
+			</ul>
+		</li>	
+	</ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+</script>
+
+<script>
+	//$('ul.emphasis').children('li').css('color', 'green'); (use this if you only ever neeed to select the direct children)
+
+	//$('ul.emphasis').find('li').css('color', 'green');  (Find all descendant list items)
+
+	//$('ul.emphasis').children('li:nth-child(2)').addClass('emphasis'); select any child using CSS nth-child
+
+	//$('ul.emphasis').children('li:nth-child(2)').text('added with jQuery'); (Add new value/text using css selector and jQuery)
+
+	//$('ul.emphasis').children('li').eq(4).next().text('added with jQuery');  (Use jQuery to select the 5th item and the next)
+
+	//$('ul.emphasis').children('li:first').addClass('emphasis'); (select only the first 'li')
+
+	//$('ul.emphasis').children('li').first().addClass('emphasis');
+
+	//$('li').parents('div.containter').removeClass('emphasis');
+	console.log();
+</script>
+
+</body>
+</html>
