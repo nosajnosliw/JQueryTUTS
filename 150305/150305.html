@@ -1,50 +1,32 @@
 <!DOCTYPE html>
-<!--Lesson 3 from Tuts+ 30 Days to Learn Jquery, basics of Querying the DOM - review a handful of traversal methods that you'll use often in your projects, including children(), find(), parent(), closest(), and next().-->
+<!--Lesson 4 from Tuts+ 30 Days to Learn Jquery. Building a stylesheet switcher to furthe runderstand working with Events in jQuery-->
 <html>
 <head>
-<meta charset=utf-8>
-<title></title>
-<style> 
-.emphasis { color:green; }
-.container { color:green; }
-/*li {color:black;}*/
-</style>
-	<!-- <script>
-	$(function() {
-		$('li:first-child').addClass('emphasis');	
+	<meta charset=utf-8>
+	<title>jQuery Events</title>
+	<link rel="stylesheet" href="day.css">
+		<style> 
 
-	});
-	</script>
-	
-	<script>
-	$(document).ready(function() {
-		$('li:first-child').addClass('emphasis');
-	});
-	</script>
-	-->
+		</style>
+	<!--  -->
 </head>
 
 <body>
 <div class="container">
-<h1>Welcome to my Website </h1>
-	<p>  This is my website.  I created it as part of a jQuery tutorial.  I really want to be better at front end and mobile development so that I can get a job that will pay me enough to pay my rent, student loans and afford some new clothes, a boyfriend and a trip to Berghain in Berlin!!!
-	</p>
+	<h1>YAASSSSSS!!!!!</h1>
+	<button>Day</button>
+	<button>Night</button>
+		<p>  
+			
+		</p>	
+</div>
 
-	<div class="container">
-	<ul class = "emphasis">
-		<li>Wassup, hoe!</li>
-		<li>Hello, you</li>
-		<li>Hey, gurl!!</li>
-		<li>Hey, bitch!!</li>
-		<li>Hey fag!!!</li>
-		<li>HEY!!!!</li>
-			<ul>
-				<li>Don't call me no hoe!</li>
-				<li>Please don't call me that!!</li>
-			</ul>
-		</li>	
-	</ul>
-	</div>
+<div>
+	<ul class='hiho'>
+		<li>Hi</li>
+		<li>Ho</li>
+		<li>Hi</li>
+		<li>Ho</li>
 </div>
 
 
@@ -52,24 +34,19 @@
 </script>
 
 <script>
-	//$('ul.emphasis').children('li').css('color', 'green'); (use this if you only ever neeed to select the direct children)
 
-	//$('ul.emphasis').find('li').css('color', 'green');  (Find all descendant list items)
+/* This is a JS best practice to get your functions to run automatically without needing to be called.  It also helps to distinguihs between local and global variables.  
+See articles here: https://sarfraznawaz.wordpress.com/2012/01/26/javascript-self-invoking-functions/ and here: http://esbueno.noahstokes.com/post/77292606977/self-executing-anonymous-functions-or-how-to-write */
 
-	//$('ul.emphasis').children('li:nth-child(2)').addClass('emphasis'); select any child using CSS nth-child
-
-	//$('ul.emphasis').children('li:nth-child(2)').text('added with jQuery'); (Add new value/text using css selector and jQuery)
-
-	//$('ul.emphasis').children('li').eq(4).next().text('added with jQuery');  (Use jQuery to select the 5th item and the next)
-
-	//$('ul.emphasis').children('li:first').addClass('emphasis'); (select only the first 'li')
-
-	//$('ul.emphasis').children('li').first().addClass('emphasis');
-
-	//$('li').parents('div.containter').removeClass('emphasis');
-	console.log($('ul').parents('.container'));
-	console.log($('ul').closest('.container'));
-	//.closest will find the closest selector in the DOM tree.  the Closes method is the easeit way to select a particulat element.  Parents will go up the DOM tree and save all the elements in the DOM tree that match the container that matches that which you searched for. 
+(function() {
+	$('button').click(function()  {
+		/* console.log(this); -- This isn't jQuery.  YOu can't access the methods because this is only referring to a regular DOM node.  You have to wrap this in jQuery like the below, which will allow you to change teh button text onlick. */
+		$(this).text('FAG!');  
+		var uls = $('ul'); /* Get in the habit of caching your variables.  Rather than type $('ul') everytime you want ot access the ul DOM item, create a variable like so. */		
+		uls.click(); 
+		uls.find('li:first-child').text();
+	});
+})();
 
 </script>
 
